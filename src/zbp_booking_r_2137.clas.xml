@@ -3,13 +3,15 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_DATA_TRAVEL2137</CLSNAME>
+    <CLSNAME>ZBP_BOOKING_R_2137</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Data</DESCRIPT>
+    <DESCRIPT>Behavior Implementation for ZTRAVEL_R_2137</DESCRIPT>
+    <CATEGORY>06</CATEGORY>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
+    <CLSDEFINT>ZTRAVEL_R_2137</CLSDEFINT>
    </VSEOCLASS>
   </asx:values>
  </asx:abap>
