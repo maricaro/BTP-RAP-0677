@@ -33,6 +33,20 @@ CLASS lhc_BookingSupplement IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD calculateTotalPrice.
+
+      " Read parent ID
+    READ ENTITIES OF ztravel_r_2137 IN LOCAL MODE
+    ENTITY BookingSupplement BY \_Travel
+    FIELDS ( TravelUUID )
+    WITH CORRESPONDING #( keys )
+    RESULT DATA(travels).
+
+    " Trigger Parent Internal Action
+    MODIFY ENTITIES OF ztravel_r_2137 IN LOCAL MODE
+      ENTITY Travel
+      EXECUTE reCalcTotalPrice
+      FROM CORRESPONDING #( travels ).
+
   ENDMETHOD.
 
   METHOD setBookSupplNumber.

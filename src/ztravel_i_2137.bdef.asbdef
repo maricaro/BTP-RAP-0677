@@ -14,7 +14,7 @@ define behavior for ZTRAVEL_I_2137 alias Travel
   use action validateAgencyID;
   use action validateDateRange;
   use action validateCurrencyID;
-  use action validateBookFee;
+  //use action validateBookFee;
 
   use action Edit;
   use action Activate;
