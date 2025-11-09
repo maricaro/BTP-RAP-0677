@@ -1,0 +1,16 @@
+unmanaged implementation in class zbp_r_hcm_rap_0677 unique;
+strict ( 2 );
+
+define behavior for ZR_HCM_RAP_0677  alias HCM
+//late numbering
+lock master
+authorization master ( global, instance )
+etag master CreaDateTime
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) ENumber;
+  field ( mandatory : create ) EName;
+}

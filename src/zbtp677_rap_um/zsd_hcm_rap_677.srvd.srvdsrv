@@ -1,0 +1,4 @@
+@EndUserText.label: 'HCM - Service Definition'
+define service ZSD_HCM_RAP_677 {
+  expose ZC_HCM_RAP_0677 as HCM;
+}

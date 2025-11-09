@@ -1,0 +1,164 @@
+@Metadata.layer: #CORE
+
+@Search.searchable: true
+
+@UI: { headerInfo: {
+           typeName: 'Employee',
+           typeNamePlural: 'Employees',
+
+           title: {
+               type: #STANDARD,
+               label: 'Employee',
+               value: 'EName'
+           }
+       }
+ }
+
+annotate entity ZC_HCM_RAP_0677
+    with 
+{
+  @Search.defaultSearchElement: true
+  @UI.facet: [{
+      id: 'Employees',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Employee',
+      position: 10
+      }]
+  @UI: { lineItem: [{
+             position: 10,
+             label: 'Employee Number',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 10,
+             label: 'Employee Number'
+         }]
+   }
+  ENumber;
+
+  @Search.defaultSearchElement: true
+  @UI: { lineItem: [{
+             position: 20,
+             label: 'Employee Name',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 20,
+             label: 'Employee Name'
+         }],
+         selectionField: [{
+             position: 10
+         }]
+   }
+  EName;
+
+  @UI: { lineItem: [{
+            position: 30,
+            label: 'Employee Department',
+            importance: #HIGH
+        }],
+        identification: [{
+            position: 30,
+            label: 'Employee Department'
+        }]
+  }
+  EDepartment;
+
+  @UI: { lineItem: [{
+             position: 40,
+             label: 'Status',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 40,
+             label: 'Status'
+         }]
+   }
+  Status;
+
+  @UI: { lineItem: [{
+            position: 50,
+            label: 'Job Title',
+            importance: #HIGH
+        }],
+        identification: [{
+            position: 50,
+            label: 'Job Title'
+        }]
+  }
+  JobTitle;
+
+  @UI: { lineItem: [{
+             position: 60,
+             label: 'Start Date',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 60,
+             label: 'Start Date'
+         }]
+   }
+  StartDate;
+
+  @UI: { lineItem: [{
+             position: 70,
+             label: 'End Date',
+             importance: #MEDIUM
+         }],
+         identification: [{
+             position: 70,
+             label: 'End Date'
+         }]
+   }
+  EndDate;
+
+  @UI: { lineItem: [{
+             position: 80,
+             label: 'Email',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 80,
+             label: 'Email'
+         }]
+   }
+  Email;
+
+  @UI: { lineItem: [{
+             position: 90,
+             label: 'Manager Number',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 90,
+             label: 'Manager Number'
+         }]
+   }
+  MNumber;
+
+  @UI: { lineItem: [{
+             position: 100,
+             label: 'Manager Name',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 100,
+             label: 'Manager Name'
+         }]
+   }
+  MName;
+
+  @UI: { lineItem: [{
+             position: 110,
+             label: 'Manager Department',
+             importance: #HIGH
+         }],
+         identification: [{
+             position: 110,
+             label: 'Manager Department'
+         }]
+   }
+  MDepartment;
+    
+}
